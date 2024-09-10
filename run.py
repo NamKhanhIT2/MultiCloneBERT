@@ -64,8 +64,8 @@ dfg_function = {
 # load parsers
 parsers = {}
 for lang in dfg_function:
-    LANGUAGE = Language('parser/my-languages.so')
-    parser = Parser(LANGUAGE)
+    LANGUAGE = Language('parser/my-languages.so',lang)
+    parser = Parser()
     parser.set_language(LANGUAGE)
     parser = [parser, dfg_function[lang]]
     parsers[lang] = parser
